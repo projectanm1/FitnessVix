@@ -18,6 +18,7 @@ router.get('/', async (req, res) => {
             {"firstname": "royi", "lastname": "tvizer", "id": 203926084, "email": "royi.twizer@gmail.com"}
         ];
         res.json(developers); // Send the list of developers as a JSON response
+        console.log("Developers about fetched successfully")
     } catch (error) {
         console.error(error);
         res.status(500).json({ message: error.message }); // Send a 500 Internal Server Error status with the error message

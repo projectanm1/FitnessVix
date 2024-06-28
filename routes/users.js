@@ -21,6 +21,7 @@ router.get('/:id', async (req, res) => {
         }
         // Send the generated report as JSON response
         res.json(user);
+        console.log("User details fetched successfully")
     } catch (error) {
         res.status(500).json({ message: error.message });
         console.error(error);

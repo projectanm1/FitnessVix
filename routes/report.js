@@ -54,6 +54,7 @@ router.get('/', async (req, res) => {
 
         // Send the generated report as JSON response
         res.json(report);
+        console.log("Report generated successfully")
     } catch (error) {
         console.error(error);
         res.status(500).json({ message: 'Internal server error' });

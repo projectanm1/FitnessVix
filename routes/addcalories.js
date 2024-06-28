@@ -35,6 +35,7 @@ router.post('/', async (req, res) => {
     // Save the new calorie data to the database
     const savedCaloriesData = await newCaloriesData.save();
     res.status(201).json(savedCaloriesData);
+    console.log("New Calorie added successfully")
   } catch (error) {
     console.error(error);
     res.status(400).json({ message: error.message });
